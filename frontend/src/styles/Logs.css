@@ -1,0 +1,99 @@
+.logs-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advanced-filter-btn {
+  padding: 8px 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.logs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.status-tag {
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.status-tag.success {
+  background-color: #28a745;
+}
+
+.status-tag.failure {
+  background-color: #dc3545;
+}
+
+.status-tag.warning {
+  background-color: #ffc107;
+  color: black;
+}
+
+/* Mobile Cards */
+.logs-cards {
+  display: none;
+}
+
+.log-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logs-table {
+    display: none;
+  }
+  .logs-cards {
+    display: block;
+  }
+}
