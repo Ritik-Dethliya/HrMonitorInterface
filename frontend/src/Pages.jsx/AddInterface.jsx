@@ -28,7 +28,7 @@ const AddInterfaceLog = () => {
     setSuccessMsg("");
 
     try {
-      const res = await axios.post("/api/interface-logs", formData);
+      const res = await axios.post("https://hrmonitorinterface.onrender.com/api/logs/add-logs", formData);
       setSuccessMsg("Log added successfully!");
       setFormData({
         interfaceName: "",
@@ -57,6 +57,7 @@ const AddInterfaceLog = () => {
             value={formData.interfaceName}
             onChange={handleChange}
             required
+            className="glowing-border"
           />
         </label>
 
@@ -68,12 +69,19 @@ const AddInterfaceLog = () => {
             value={formData.integrationKey}
             onChange={handleChange}
             required
+            className="glowing-border"
           />
         </label>
 
         <label>
           Status:
-          <select name="status" value={formData.status} onChange={handleChange}>
+          <br />
+          <select 
+            name="status" 
+            value={formData.status} 
+            onChange={handleChange}
+            className="glowing-border"
+        >
             <option value="success">Success</option>
             <option value="failure">Failure</option>
           </select>
@@ -81,7 +89,10 @@ const AddInterfaceLog = () => {
 
         <label>
           Event Type:
-          <select name="eventType" value={formData.eventType} onChange={handleChange}>
+          <select 
+            name="eventType"
+            className="glowing-border" 
+            value={formData.eventType} onChange={handleChange}>
             <option value="start">Start</option>
             <option value="end">End</option>
             <option value="error">Error</option>
@@ -97,6 +108,7 @@ const AddInterfaceLog = () => {
             value={formData.duration}
             min="0"
             onChange={handleChange}
+            className="glowing-border"
           />
         </label>
 
@@ -106,6 +118,7 @@ const AddInterfaceLog = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            className="glowing-border"
           ></textarea>
         </label>
 

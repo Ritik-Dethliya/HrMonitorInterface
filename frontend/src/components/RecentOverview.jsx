@@ -8,7 +8,7 @@ function RecentOverview() {
 
     async function getActivity(){
         try {
-            let res=await axios.get("http://localhost:8000/api/logs/recent-activity")
+            let res=await axios.get("https://hrmonitorinterface.onrender.com/api/logs/recent-activity")
             console.log(res.data)
             setRecent(res.data)
         } catch (error) {
