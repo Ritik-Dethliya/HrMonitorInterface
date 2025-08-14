@@ -14,6 +14,7 @@ const Navbar = () => {
         <li><a href="/">Dashboard</a></li>
         <li><a href="/logs">Logs</a></li>
         <li><a href="/about">About</a></li>
+        <li><a href="/add-log">Addlog</a></li>
       </ul>
 
       {/* Hamburger Icon */}

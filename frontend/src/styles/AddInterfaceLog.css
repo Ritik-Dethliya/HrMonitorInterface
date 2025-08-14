@@ -1,0 +1,66 @@
+.add-log-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.add-log-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-log-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.add-log-form input,
+.add-log-form select,
+.add-log-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.add-log-form textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.add-log-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-log-form button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.success-msg {
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
