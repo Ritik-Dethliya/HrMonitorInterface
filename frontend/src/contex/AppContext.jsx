@@ -1,8 +1,50 @@
-import React, { createContext } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
+  const [Summary,setSummary]=useState(null)
+  const [TrendData,setTrendData]=useState(null)
+  const [Logs,setLogs]=useState(null)
+
+  useEffect(()=>{
+    getSummary()
+    getLogs()
+    getTrend()
+  },[])
+
+  async function getSummary(){
+    try{
+      let res=await axios.get("http://localhost:8000/api/get-summary")
+      console.log(res.data)
+      setSummary(res.data)
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
+
+  async function getTrend(){
+    try{
+      let res=await axios.get("http://localhost:8000/api/get-trend")
+      console.log(res.data)
+      setTrendData(res.data)
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
+
+   async function getLogs(){
+    try{
+      let res=await axios.get("http://localhost:8000/api/get-logs")
+      console.log(res.data)
+      setTrendData(res.data)
+    }
+    catch(error){
+      console.log(error)
+    }
+  }
   const summary = {
     success: 450,
     failure: 50,

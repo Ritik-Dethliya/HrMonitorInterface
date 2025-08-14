@@ -1,99 +1,174 @@
 .logs-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 1.5rem;
+  background: #f9fafc;
+  min-height: 100vh;
 }
 
+/* Header */
 .logs-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
+.logs-header h1 {
+  font-size: 1.8rem;
+  color: #2a3d66;
+}
+
+/* Advanced Filter Button */
 .advanced-filter-btn {
-  padding: 8px 12px;
-  background-color: #007bff;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
   border: none;
   color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
+.advanced-filter-btn:hover {
+  background: linear-gradient(135deg, #357abd, #285a8e);
+  transform: translateY(-2px);
+}
+
+/* Filters */
 .filters {
   display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 15px 0;
 }
 
 .filters input,
 .filters select {
-  padding: 8px;
-  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #d0d7e2;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
 }
 
+.filters input:focus,
+.filters select:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
+}
+
+/* Table Styles */
 .logs-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.logs-table th,
-.logs-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
+.logs-table th {
+  background: #f1f5fb;
+  color: #2a3d66;
   text-align: left;
+  padding: 0.9rem;
+  font-size: 0.95rem;
 }
 
-.status-tag {
-  padding: 3px 8px;
-  border-radius: 4px;
-  color: white;
+.logs-table td {
+  padding: 0.9rem;
   font-size: 0.9rem;
+  border-bottom: 1px solid #eef2f8;
 }
 
-.status-tag.success {
-  background-color: #28a745;
+.logs-table tr:hover {
+  background: #f9fcff;
 }
 
-.status-tag.failure {
-  background-color: #dc3545;
+/* Status Tags */
+.status-tag {
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
 }
 
-.status-tag.warning {
-  background-color: #ffc107;
-  color: black;
-}
-
-/* Mobile Cards */
-.logs-cards {
-  display: none;
-}
-
-.log-card {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
+.status-tag.success { background: #28a745; }
+.status-tag.failure { background: #dc3545; }
+.status-tag.warning { background: #ffc107; color: #333; }
 
 /* Pagination */
 .pagination {
-  margin-top: 15px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
 }
 
 .pagination button {
-  padding: 6px 12px;
+  padding: 0.5rem 0.9rem;
+  background: #4a90e2;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-/* Responsive */
+.pagination button:hover:not(:disabled) {
+  background: #357abd;
+  transform: translateY(-1px);
+}
+
+.pagination button:disabled {
+  background: #c0cbe1;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Mobile Responsive Table -> Card Style */
 @media (max-width: 768px) {
-  .logs-table {
+  .logs-table,
+  .logs-table thead,
+  .logs-table tbody,
+  .logs-table th,
+  .logs-table td,
+  .logs-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .logs-table thead {
     display: none;
   }
-  .logs-cards {
+
+  .logs-table tr {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .logs-table td {
+    border: none;
+    padding: 0.5rem 0;
+    position: relative;
+    font-size: 0.9rem;
+  }
+
+  .logs-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #2a3d66;
     display: block;
+    margin-bottom: 0.3rem;
   }
 }

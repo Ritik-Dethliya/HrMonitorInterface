@@ -1,24 +1,36 @@
-import React, { useContext, useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../styles/Logs.css";
-import { AppContext } from "../contex/AppContext";
 
 const Logs = () => {
-  const { logs } = useContext(AppContext);
+  const [logs, setLogs] = useState([]);
   const [searchInterface, setSearchInterface] = useState("");
   const [searchStatus, setSearchStatus] = useState("");
   const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const limit = 5;
 
-  // Filter + Pagination
-  const filteredLogs = logs.filter((log) => {
-    return (
-      log.interfaceName.toLowerCase().includes(searchInterface.toLowerCase()) &&
-      (searchStatus ? log.status === searchStatus : true)
-    );
-  });
+  useEffect(() => {
+    getLogs();
+  }, [page, searchInterface, searchStatus]);
 
-  const paginatedLogs = filteredLogs.slice((page - 1) * limit, page * limit);
-  const totalPages = Math.ceil(filteredLogs.length / limit);
+  async function getLogs() {
+    try {
+      const res = await axios.get("http://localhost:8000/api/logs", {
+        params: {
+          page,
+          limit,
+          searchInterface,
+          searchStatus
+        }
+      });
+      console.log(res.data)
+      setLogs(res.data.logs);
+      setTotalPages(Math.ceil(res.data.total/limit));
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <div className="logs-container">
@@ -58,7 +70,7 @@ const Logs = () => {
           </tr>
         </thead>
         <tbody>
-          {paginatedLogs.map((log) => (
+          {logs.map((log) => (
             <tr key={log.integrationKey}>
               <td>{log.interfaceName}</td>
               <td>{log.integrationKey}</td>
@@ -74,39 +86,15 @@ const Logs = () => {
         </tbody>
       </table>
 
-      {/* Mobile Card View */}
-      <div className="logs-cards">
-        {paginatedLogs.map((log) => (
-          <div className="log-card" key={log.integrationKey}>
-            <h3>{log.interfaceName}</h3>
-            <p><strong>Key:</strong> {log.integrationKey}</p>
-            <p>
-              <strong>Status:</strong>{" "}
-              <span className={`status-tag ${log.status.toLowerCase()}`}>
-                {log.status}
-              </span>
-            </p>
-            <p><strong>Message:</strong> {log.message}</p>
-            <p><strong>Time:</strong> {new Date(log.timestamp).toLocaleString()}</p>
-          </div>
-        ))}
-      </div>
-
       {/* Pagination */}
       <div className="pagination">
-        <button
-          onClick={() => setPage((p) => Math.max(p - 1, 1))}
-          disabled={page === 1}
-        >
+        <button onClick={() => setPage((p) => Math.max(p - 1, 1))} disabled={page === 1}>
           Prev
         </button>
         <span>
           Page {page} of {totalPages}
         </span>
-        <button
-          onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
-          disabled={page === totalPages}
-        >
+        <button onClick={() => setPage((p) => Math.min(p + 1, totalPages+1))} disabled={page === totalPages}>
           Next
         </button>
       </div>
