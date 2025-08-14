@@ -16,7 +16,7 @@ const Logs = () => {
 
   async function getLogs() {
     try {
-      const res = await axios.get("http://localhost:8000/api/logs", {
+      const res = await axios.get("https://hrmonitorinterface.onrender.com/api/logs", {
         params: {
           page,
           limit,

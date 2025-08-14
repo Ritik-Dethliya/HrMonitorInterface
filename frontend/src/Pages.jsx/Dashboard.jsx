@@ -15,7 +15,7 @@ const Dashboard = () => {
   const [timeRange, setTimeRange] = useState("24h");
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/logs/trend?range=${timeRange}`)
+    fetch(`https://hrmonitorinterface.onrender.com/api/logs/trend?range=${timeRange}`)
       .then(res => res.json())
       .then(data => {
         console.log(data)
@@ -58,7 +58,9 @@ const Dashboard = () => {
           <h3>Failure</h3>
           <p>{summary.failure}</p>
         </div>
-        <div className="summary-card failure-card">
+        <div className="summary-card warning-card"
+          
+        >
           <h3>Warning</h3>
           <p>{summary.warning}</p>
         </div>
