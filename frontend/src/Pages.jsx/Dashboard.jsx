@@ -7,6 +7,7 @@ import "chart.js/auto";
 import "../styles/Dashboard.css";
 import { AppContext } from "../contex/AppContext";
 import { useEffect } from "react";
+import RecentOverview from "../components/RecentOverview";
 
 
 const Dashboard = () => {
@@ -65,7 +66,7 @@ const Dashboard = () => {
           <p>{summary.warning}</p>
         </div>
       </div>
-
+       <RecentOverview/>
       {/* Chart */}
       <div className="chart-container">
         <h2>Execution Trend</h2>

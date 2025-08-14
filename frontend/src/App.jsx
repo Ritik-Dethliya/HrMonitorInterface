@@ -5,10 +5,12 @@ import Dashboard from './Pages.jsx/Dashboard'
 import Logs from './Pages.jsx/Logs'
 import About from './Pages.jsx/About'
 
+
 function App() {
   return (
 
     <div className="app-container">
+     
       <Navbar/>
       <Routes>
         <Route path='/' element={<Dashboard/>}/>
