@@ -1,0 +1,635 @@
+[
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1001",
+    "status": "success",
+    "message": "Transaction processed successfully",
+    "eventType": "end",
+    "duration": 3.2,
+    "timestamp": "2025-08-13T10:15:32.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2045",
+    "status": "failure",
+    "message": "Inventory update failed due to timeout",
+    "eventType": "error",
+    "duration": 12.5,
+    "timestamp": "2025-08-13T11:20:14.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3300",
+    "status": "success",
+    "message": "User logged in successfully",
+    "eventType": "end",
+    "duration": 1.4,
+    "timestamp": "2025-08-13T12:10:05.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1201",
+    "status": "failure",
+    "message": "SMTP connection lost",
+    "eventType": "retry",
+    "duration": 8.1,
+    "timestamp": "2025-08-13T13:25:44.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9802",
+    "status": "success",
+    "message": "Report generated successfully",
+    "eventType": "end",
+    "duration": 14.8,
+    "timestamp": "2025-08-13T14:15:29.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1002",
+    "status": "failure",
+    "message": "Card declined by bank",
+    "eventType": "error",
+    "duration": 4.7,
+    "timestamp": "2025-08-13T15:12:36.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2046",
+    "status": "success",
+    "message": "Inventory data synced successfully",
+    "eventType": "end",
+    "duration": 10.5,
+    "timestamp": "2025-08-13T16:05:15.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3301",
+    "status": "failure",
+    "message": "Invalid user credentials",
+    "eventType": "error",
+    "duration": 2.9,
+    "timestamp": "2025-08-13T16:45:10.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1202",
+    "status": "success",
+    "message": "Email sent to user successfully",
+    "eventType": "end",
+    "duration": 6.2,
+    "timestamp": "2025-08-13T17:30:45.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9803",
+    "status": "failure",
+    "message": "Report template missing",
+    "eventType": "error",
+    "duration": 11.1,
+    "timestamp": "2025-08-13T18:05:22.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1003",
+    "status": "success",
+    "message": "UPI payment processed",
+    "eventType": "end",
+    "duration": 3.9,
+    "timestamp": "2025-08-13T18:55:01.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2047",
+    "status": "failure",
+    "message": "Database lock error during sync",
+    "eventType": "retry",
+    "duration": 9.4,
+    "timestamp": "2025-08-13T19:15:43.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3302",
+    "status": "success",
+    "message": "Password reset successfully",
+    "eventType": "end",
+    "duration": 2.1,
+    "timestamp": "2025-08-13T19:45:33.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1203",
+    "status": "failure",
+    "message": "Recipient inbox full",
+    "eventType": "error",
+    "duration": 7.3,
+    "timestamp": "2025-08-13T20:15:50.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9804",
+    "status": "success",
+    "message": "Report exported to PDF",
+    "eventType": "end",
+    "duration": 15.6,
+    "timestamp": "2025-08-13T20:50:19.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1004",
+    "status": "failure",
+    "message": "Payment API rate limit reached",
+    "eventType": "retry",
+    "duration": 5.5,
+    "timestamp": "2025-08-13T21:10:40.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2048",
+    "status": "success",
+    "message": "Stock levels updated",
+    "eventType": "end",
+    "duration": 12.3,
+    "timestamp": "2025-08-13T21:45:14.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3303",
+    "status": "failure",
+    "message": "Token expired",
+    "eventType": "error",
+    "duration": 3.7,
+    "timestamp": "2025-08-13T22:05:00.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1204",
+    "status": "success",
+    "message": "Bulk emails sent",
+    "eventType": "end",
+    "duration": 8.9,
+    "timestamp": "2025-08-13T22:35:26.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9805",
+    "status": "failure",
+    "message": "Data source unreachable",
+    "eventType": "error",
+    "duration": 13.4,
+    "timestamp": "2025-08-13T23:10:10.000Z"
+  }
+  ,
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1005",
+    "status": "success",
+    "message": "Netbanking transaction completed",
+    "eventType": "end",
+    "duration": 4.2,
+    "timestamp": "2025-08-14T00:05:12.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2049",
+    "status": "failure",
+    "message": "Inventory API returned invalid data",
+    "eventType": "error",
+    "duration": 11.9,
+    "timestamp": "2025-08-14T00:35:40.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3304",
+    "status": "success",
+    "message": "User registration completed",
+    "eventType": "end",
+    "duration": 2.6,
+    "timestamp": "2025-08-14T01:05:25.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1205",
+    "status": "failure",
+    "message": "Email service API key expired",
+    "eventType": "error",
+    "duration": 7.8,
+    "timestamp": "2025-08-14T01:35:11.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9806",
+    "status": "success",
+    "message": "Monthly analytics report generated",
+    "eventType": "end",
+    "duration": 16.2,
+    "timestamp": "2025-08-14T02:05:33.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1006",
+    "status": "failure",
+    "message": "Gateway timeout during payment",
+    "eventType": "retry",
+    "duration": 5.1,
+    "timestamp": "2025-08-14T02:35:40.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2050",
+    "status": "success",
+    "message": "Product prices updated",
+    "eventType": "end",
+    "duration": 9.8,
+    "timestamp": "2025-08-14T03:05:21.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3305",
+    "status": "failure",
+    "message": "User locked due to multiple failed logins",
+    "eventType": "error",
+    "duration": 3.4,
+    "timestamp": "2025-08-14T03:35:15.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1206",
+    "status": "success",
+    "message": "Weekly newsletter sent",
+    "eventType": "end",
+    "duration": 6.7,
+    "timestamp": "2025-08-14T04:05:48.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9807",
+    "status": "failure",
+    "message": "Report export failed - file permission denied",
+    "eventType": "error",
+    "duration": 12.1,
+    "timestamp": "2025-08-14T04:35:55.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1007",
+    "status": "success",
+    "message": "Wallet payment successful",
+    "eventType": "end",
+    "duration": 3.5,
+    "timestamp": "2025-08-14T05:05:10.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2051",
+    "status": "failure",
+    "message": "Data sync failed - checksum mismatch",
+    "eventType": "error",
+    "duration": 10.2,
+    "timestamp": "2025-08-14T05:35:41.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3306",
+    "status": "success",
+    "message": "Multi-factor authentication passed",
+    "eventType": "end",
+    "duration": 2.3,
+    "timestamp": "2025-08-14T06:05:55.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1207",
+    "status": "failure",
+    "message": "Email attachment too large",
+    "eventType": "error",
+    "duration": 8.5,
+    "timestamp": "2025-08-14T06:35:18.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9808",
+    "status": "success",
+    "message": "Year-end financial report generated",
+    "eventType": "end",
+    "duration": 18.0,
+    "timestamp": "2025-08-14T07:05:29.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1008",
+    "status": "failure",
+    "message": "Invalid CVV provided",
+    "eventType": "error",
+    "duration": 4.6,
+    "timestamp": "2025-08-14T07:35:50.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2052",
+    "status": "success",
+    "message": "Stock quantity adjusted after sales",
+    "eventType": "end",
+    "duration": 11.3,
+    "timestamp": "2025-08-14T08:05:44.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3307",
+    "status": "failure",
+    "message": "User session expired",
+    "eventType": "error",
+    "duration": 3.2,
+    "timestamp": "2025-08-14T08:35:33.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1208",
+    "status": "success",
+    "message": "Event invitations sent",
+    "eventType": "end",
+    "duration": 7.4,
+    "timestamp": "2025-08-14T09:05:59.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9809",
+    "status": "failure",
+    "message": "Unable to connect to reporting database",
+    "eventType": "retry",
+    "duration": 14.7,
+    "timestamp": "2025-08-14T09:35:15.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1009",
+    "status": "success",
+    "message": "Credit card payment completed",
+    "eventType": "end",
+    "duration": 3.8,
+    "timestamp": "2025-08-07T10:25:12.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2053",
+    "status": "failure",
+    "message": "Sync aborted due to missing SKU data",
+    "eventType": "error",
+    "duration": 12.6,
+    "timestamp": "2025-08-08T14:15:40.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3308",
+    "status": "success",
+    "message": "User logged out successfully",
+    "eventType": "end",
+    "duration": 1.9,
+    "timestamp": "2025-08-09T08:05:25.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1209",
+    "status": "failure",
+    "message": "Email bounced - invalid recipient",
+    "eventType": "error",
+    "duration": 6.3,
+    "timestamp": "2025-08-10T11:42:11.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9810",
+    "status": "success",
+    "message": "Daily sales report generated",
+    "eventType": "end",
+    "duration": 13.8,
+    "timestamp": "2025-08-11T09:15:33.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1010",
+    "status": "failure",
+    "message": "Transaction declined - insufficient funds",
+    "eventType": "error",
+    "duration": 4.4,
+    "timestamp": "2025-08-12T16:05:40.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2054",
+    "status": "success",
+    "message": "Warehouse inventory synced",
+    "eventType": "end",
+    "duration": 9.5,
+    "timestamp": "2025-08-12T18:35:21.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3309",
+    "status": "failure",
+    "message": "Authentication server unavailable",
+    "eventType": "retry",
+    "duration": 3.0,
+    "timestamp": "2025-08-13T07:15:15.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1210",
+    "status": "success",
+    "message": "Password reset email sent",
+    "eventType": "end",
+    "duration": 6.1,
+    "timestamp": "2025-08-13T12:55:48.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9811",
+    "status": "failure",
+    "message": "Failed to fetch report data from API",
+    "eventType": "error",
+    "duration": 15.2,
+    "timestamp": "2025-08-14T06:45:15.000Z"
+  }
+  ,
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1011",
+    "status": "success",
+    "message": "UPI payment completed",
+    "eventType": "end",
+    "duration": 3.6,
+    "timestamp": "2025-07-02T09:15:12.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2055",
+    "status": "failure",
+    "message": "Sync failed - database connection lost",
+    "eventType": "error",
+    "duration": 11.7,
+    "timestamp": "2025-07-05T13:35:40.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3310",
+    "status": "success",
+    "message": "User registration successful",
+    "eventType": "end",
+    "duration": 2.8,
+    "timestamp": "2025-07-08T08:05:25.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1211",
+    "status": "failure",
+    "message": "SMTP timeout error",
+    "eventType": "retry",
+    "duration": 7.9,
+    "timestamp": "2025-07-10T15:42:11.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9812",
+    "status": "success",
+    "message": "Quarterly performance report generated",
+    "eventType": "end",
+    "duration": 14.3,
+    "timestamp": "2025-07-13T11:15:33.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1012",
+    "status": "failure",
+    "message": "Invalid payment token",
+    "eventType": "error",
+    "duration": 4.9,
+    "timestamp": "2025-07-16T16:05:40.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2056",
+    "status": "success",
+    "message": "New products added to inventory",
+    "eventType": "end",
+    "duration": 10.4,
+    "timestamp": "2025-07-19T18:35:21.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3311",
+    "status": "failure",
+    "message": "Password policy violation",
+    "eventType": "error",
+    "duration": 2.5,
+    "timestamp": "2025-07-22T07:15:15.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1212",
+    "status": "success",
+    "message": "Promotional emails sent",
+    "eventType": "end",
+    "duration": 6.8,
+    "timestamp": "2025-07-25T12:55:48.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9813",
+    "status": "failure",
+    "message": "Missing data in report source",
+    "eventType": "error",
+    "duration": 15.9,
+    "timestamp": "2025-07-28T06:45:15.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1013",
+    "status": "success",
+    "message": "International credit card payment processed",
+    "eventType": "end",
+    "duration": 4.1,
+    "timestamp": "2024-02-12T09:25:12.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2057",
+    "status": "failure",
+    "message": "Inventory service down",
+    "eventType": "error",
+    "duration": 12.4,
+    "timestamp": "2024-03-18T14:35:40.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3312",
+    "status": "success",
+    "message": "OAuth login successful",
+    "eventType": "end",
+    "duration": 2.4,
+    "timestamp": "2024-04-07T08:15:25.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1213",
+    "status": "failure",
+    "message": "Email rejected by spam filter",
+    "eventType": "error",
+    "duration": 6.5,
+    "timestamp": "2024-05-09T11:42:11.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9814",
+    "status": "success",
+    "message": "Customer feedback report generated",
+    "eventType": "end",
+    "duration": 14.0,
+    "timestamp": "2024-06-20T10:15:33.000Z"
+  },
+  {
+    "interfaceName": "PaymentGateway",
+    "integrationKey": "PG-1014",
+    "status": "failure",
+    "message": "Bank API not responding",
+    "eventType": "retry",
+    "duration": 5.3,
+    "timestamp": "2024-08-14T16:05:40.000Z"
+  },
+  {
+    "interfaceName": "InventorySync",
+    "integrationKey": "INV-2058",
+    "status": "success",
+    "message": "Seasonal products removed from catalog",
+    "eventType": "end",
+    "duration": 9.0,
+    "timestamp": "2024-09-25T18:35:21.000Z"
+  },
+  {
+    "interfaceName": "UserAuth",
+    "integrationKey": "UA-3313",
+    "status": "failure",
+    "message": "Invalid two-factor authentication code",
+    "eventType": "error",
+    "duration": 3.1,
+    "timestamp": "2024-10-30T07:15:15.000Z"
+  },
+  {
+    "interfaceName": "EmailService",
+    "integrationKey": "EM-1214",
+    "status": "success",
+    "message": "Email verification sent",
+    "eventType": "end",
+    "duration": 6.6,
+    "timestamp": "2024-11-18T12:55:48.000Z"
+  },
+  {
+    "interfaceName": "ReportGenerator",
+    "integrationKey": "RG-9815",
+    "status": "failure",
+    "message": "Report query timeout",
+    "eventType": "error",
+    "duration": 15.4,
+    "timestamp": "2024-12-05T06:45:15.000Z"
+  }
+
+]

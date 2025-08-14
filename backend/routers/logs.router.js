@@ -1,9 +1,9 @@
 import e from "express";
-import { getLogs, getSummary } from "../controller/logs.controler.js";
+import { getLogs, getTrend } from "../controller/logs.controler.js";
 
 const logRouter=e.Router()
 
 logRouter.get("/", getLogs);
-logRouter.get("/summary", getSummary);
+logRouter.get("/trend", getTrend);
 
 export default logRouter
