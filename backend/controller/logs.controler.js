@@ -191,3 +191,24 @@ console.log(summary);
     res.status(500).json({ error: "Server error while fetching trend" });
   }
 }
+
+export async function recentActivity(req,res){
+  try {
+    const activity=await InterfaceLogModel.find().sort({timestamp:-1}).limit(5)
+    res.status(200).send(activity)
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({"msg":"Something Went Wrong"})
+  }
+}
+
+export async function addLogs(req,res){
+  try {
+    let newLog=await InterfaceLogModel.create(req.body)
+    if(!newLog)return res.status(404).send({"msg":"unable to add log"})
+    res.status(201).send({newLog})
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({"msg":"Something went Wrong in adding log"})
+  }
+}
